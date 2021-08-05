@@ -1,0 +1,9 @@
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\bin\Debug\netstandard2.0\Dominio.deps.json
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\bin\Debug\netstandard2.0\Dominio.dll
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\bin\Debug\netstandard2.0\Dominio.pdb
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\obj\Debug\netstandard2.0\Dominio.csprojAssemblyReference.cache
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\obj\Debug\netstandard2.0\Dominio.AssemblyInfoInputs.cache
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\obj\Debug\netstandard2.0\Dominio.AssemblyInfo.cs
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\obj\Debug\netstandard2.0\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\obj\Debug\netstandard2.0\Dominio.dll
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\obj\Debug\netstandard2.0\Dominio.pdb

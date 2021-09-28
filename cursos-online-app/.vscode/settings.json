@@ -1,0 +1,2 @@
+{"colorize.include": ["**/*.js"],
+  "colorize.languages": ["javascriptreact", "javascript", "css", "scss"]}

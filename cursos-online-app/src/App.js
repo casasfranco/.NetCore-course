@@ -6,8 +6,26 @@ import ProfileUser from "./components/security/ProfileUser";
 import Register from "./components/security/Register";
 import AppNavbar from "./components/Navigate/AppNavbar";
 import { theme } from "./theme";
+import { useStateValue } from "./context/store";
+import { useEffect, useState } from "react";
+import { getCurrentUser } from "./actions/UserAction";
 
 const App = () => {
+  const [{ userSession }, dispatch] = useStateValue();
+  const [initApp, setInitApp] = useState(false);
+
+  useEffect(() => {
+    if (!initApp) {
+      getCurrentUser(dispatch)
+        .then((response) => {
+          setInitApp(true);
+        })
+        .catch((error) => {
+          setInitApp(true);
+        });
+    }
+  }, []);
+
   return (
     <Router>
       <ThemeProvider theme={theme}>

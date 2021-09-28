@@ -8,6 +8,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import UserImage from "../../../logo.svg";
+import { useStateValue } from "../../../context/store";
 
 const useStyles = makeStyles((theme) => ({
   sectionDesktop: {
@@ -33,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
 
 const BarSession = () => {
   const classes = useStyles();
+  const [{ userSession }, dispatch] = useStateValue();
 
   return (
     <Toolbar>
@@ -43,7 +45,9 @@ const BarSession = () => {
       <div className={classes.grow}></div>
       <div className={classes.sectionDesktop}>
         <Button color="inherit">Exit</Button>
-        <Button color="inherit">Username</Button>
+        <Button color="inherit">
+          {userSession?.user?.nombreCompleto}
+        </Button>
         <Avatar src={UserImage}></Avatar>
       </div>
       <div className={classes.sectionMobile}>

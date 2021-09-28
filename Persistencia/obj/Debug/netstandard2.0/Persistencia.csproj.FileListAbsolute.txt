@@ -3,10 +3,11 @@ C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Persistencia\bin\Debug\netstan
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Persistencia\bin\Debug\netstandard2.0\Persistencia.pdb
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Persistencia\bin\Debug\netstandard2.0\Dominio.dll
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Persistencia\bin\Debug\netstandard2.0\Dominio.pdb
-C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Persistencia\obj\Debug\netstandard2.0\Persistencia.csprojAssemblyReference.cache
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Persistencia\obj\Debug\netstandard2.0\Persistencia.csproj.AssemblyReference.cache
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Persistencia\obj\Debug\netstandard2.0\Persistencia.AssemblyInfoInputs.cache
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Persistencia\obj\Debug\netstandard2.0\Persistencia.AssemblyInfo.cs
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Persistencia\obj\Debug\netstandard2.0\Persistencia.csproj.CoreCompileInputs.cache
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Persistencia\obj\Debug\netstandard2.0\Persistencia.csproj.CopyComplete
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Persistencia\obj\Debug\netstandard2.0\Persistencia.dll
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Persistencia\obj\Debug\netstandard2.0\Persistencia.pdb
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Persistencia\obj\Debug\netstandard2.0\Persistencia.GeneratedMSBuildEditorConfig.editorconfig

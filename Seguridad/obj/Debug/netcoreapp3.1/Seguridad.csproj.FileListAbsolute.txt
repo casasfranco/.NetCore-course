@@ -1,0 +1,17 @@
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Seguridad.deps.json
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Seguridad.dll
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Seguridad.pdb
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Aplicacion.dll
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Dominio.dll
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Persistencia.dll
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Aplicacion.pdb
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Dominio.pdb
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Persistencia.pdb
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\obj\Debug\netcoreapp3.1\Seguridad.csproj.AssemblyReference.cache
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\obj\Debug\netcoreapp3.1\Seguridad.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\obj\Debug\netcoreapp3.1\Seguridad.AssemblyInfoInputs.cache
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\obj\Debug\netcoreapp3.1\Seguridad.AssemblyInfo.cs
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\obj\Debug\netcoreapp3.1\Seguridad.csproj.CoreCompileInputs.cache
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\obj\Debug\netcoreapp3.1\Seguridad.csproj.CopyComplete
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\obj\Debug\netcoreapp3.1\Seguridad.dll
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Seguridad\obj\Debug\netcoreapp3.1\Seguridad.pdb

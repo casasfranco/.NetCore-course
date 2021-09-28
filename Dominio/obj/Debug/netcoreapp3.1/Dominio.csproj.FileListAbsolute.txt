@@ -1,0 +1,10 @@
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\bin\Debug\netcoreapp3.1\Dominio.deps.json
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\bin\Debug\netcoreapp3.1\Dominio.dll
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\bin\Debug\netcoreapp3.1\Dominio.pdb
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfoInputs.cache
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfo.cs
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio.dll
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio.pdb
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.AssemblyReference.cache

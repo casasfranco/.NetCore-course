@@ -8,8 +8,11 @@ import {
 } from "@material-ui/core";
 import style from "../Tool/Style";
 import { getCurrentUser, updateCurrentUser } from "../../actions/UserAction";
+import { useStateValue } from "../../context/store";
 
 const ProfileUser = () => {
+  const [{ userSession }, dispatch] = useStateValue();
+
   const [user, setUser] = useState({
     nombreCompleto: "",
     email: "",
@@ -19,8 +22,7 @@ const ProfileUser = () => {
   });
 
   useEffect(() => {
-    getCurrentUser().then((response) => {
-      console.log(response);
+    getCurrentUser(dispatch).then((response) => {
       setUser(response.data);
     });
   }, []);
@@ -37,7 +39,26 @@ const ProfileUser = () => {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     updateCurrentUser(user).then((response) => {
-      window.localStorage.setItem("token_security", response.data.token);
+      if (response.status === 200) {
+        dispatch({
+          type: "OPEN_SNACKBAR",
+          openMessage: {
+            open: true,
+            message: "Se guardaron exitosamente los cambios en Perfil Usuario",
+          },
+        });
+        window.localStorage.setItem("token_security", response.data.token);
+      } else {
+        dispatch({
+          type: "OPEN_SNACKBAR",
+          openMessage: {
+            open: true,
+            message:
+              "Errores al intentar guardar en: " +
+              Object.keys(response.data.errors),
+          },
+        });
+      }
     });
   };
 

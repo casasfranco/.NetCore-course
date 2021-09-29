@@ -1,6 +1,7 @@
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/styles";
-import { Grid } from "@material-ui/core";
+import { Grid, Snackbar } from "@material-ui/core";
 import Login from "./components/security/Login";
 import ProfileUser from "./components/security/ProfileUser";
 import Register from "./components/security/Register";
@@ -11,7 +12,8 @@ import { useEffect, useState } from "react";
 import { getCurrentUser } from "./actions/UserAction";
 
 const App = () => {
-  const [{ userSession }, dispatch] = useStateValue();
+  const [{ userSession, openSnackbar }, dispatch] = useStateValue();
+
   const [initApp, setInitApp] = useState(false);
 
   useEffect(() => {
@@ -24,22 +26,44 @@ const App = () => {
           setInitApp(true);
         });
     }
-  }, []);
+  }, [initApp]);
 
   return (
-    <Router>
-      <ThemeProvider theme={theme}>
-        <AppNavbar />
-        <Grid container>
-          <Switch>
-            <Route exact path="/auth/login" component={Login}></Route>
-            <Route exact path="/auth/register" component={Register}></Route>
-            <Route exact path="/auth/profile" component={ProfileUser}></Route>
-            <Route path="/" component={Login}></Route>
-          </Switch>
-        </Grid>
-      </ThemeProvider>
-    </Router>
+    <React.Fragment>
+      <Snackbar
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        open={openSnackbar ? openSnackbar.open : false}
+        autoHideDuration={3000}
+        ContentProps={{ "aria-describedby": "message-id" }}
+        message={
+          <span id="message-id">
+            {openSnackbar ? openSnackbar.message : ""}
+          </span>
+        }
+        onClose={() =>
+          dispatch({
+            type: "OPEN_SNACKBAR",
+            openMessage: {
+              open: false,
+              message: "",
+            },
+          })
+        }
+      ></Snackbar>
+      <Router>
+        <ThemeProvider theme={theme}>
+          <AppNavbar />
+          <Grid container>
+            <Switch>
+              <Route exact path="/auth/login" component={Login}></Route>
+              <Route exact path="/auth/register" component={Register}></Route>
+              <Route exact path="/auth/profile" component={ProfileUser}></Route>
+              <Route path="/" component={Login}></Route>
+            </Switch>
+          </Grid>
+        </ThemeProvider>
+      </Router>
+    </React.Fragment>
   );
 };
 

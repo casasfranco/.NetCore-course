@@ -28,7 +28,6 @@ const Login = () => {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     loginUser(user).then((response) => {
-      console.log(response);
       window.localStorage.setItem("token_security", response.data.token);
     });
   };

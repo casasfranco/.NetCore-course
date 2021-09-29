@@ -33,9 +33,14 @@ export const updateCurrentUser = (user) => {
   });
 };
 
-export const loginUser = (user) => {
+export const loginUser = (user, dispatch) => {
   return new Promise((resolve, eject) => {
     HttpClient.post("/Usuario/login", user).then((response) => {
+      dispatch({
+        type: "LOGIN",
+        user: response.data,
+        auth: true,
+      });
       resolve(response);
     });
   });

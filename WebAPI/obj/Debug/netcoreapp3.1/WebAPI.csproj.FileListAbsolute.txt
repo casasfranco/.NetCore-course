@@ -1,10 +1,3 @@
-C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj.AssemblyReference.cache
-C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.AssemblyInfoInputs.cache
-C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.AssemblyInfo.cs
-C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj.CoreCompileInputs.cache
-C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.exe
@@ -77,6 +70,13 @@ C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\bin\Debug\netcoreapp3.1
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\bin\Debug\netcoreapp3.1\Persistencia.pdb
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\bin\Debug\netcoreapp3.1\Seguridad.pdb
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\bin\Debug\netcoreapp3.1\Dominio.pdb
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj.AssemblyReference.cache
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.AssemblyInfoInputs.cache
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.AssemblyInfo.cs
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\WebAPI.StaticWebAssets.Manifest.cache
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\staticwebassets\WebAPI.StaticWebAssets.xml
 C:\Users\FrancoCasas\Documents\Rocks\ProyectoCore\WebAPI\obj\Debug\netcoreapp3.1\scopedcss\bundle\WebAPI.styles.css

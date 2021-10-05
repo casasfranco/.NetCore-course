@@ -4,8 +4,11 @@ using Dominio;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Persistencia;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
@@ -34,11 +37,13 @@ namespace Aplicacion.Seguridad
             private readonly UserManager<Usuario> _userManager;
             private readonly SignInManager<Usuario> _signInManager;
             private readonly IJwtGenerador _jwtGenerador;
-            public Manejador(UserManager<Usuario> userManager, SignInManager<Usuario> signInManager, IJwtGenerador jwtGenerador)
+            private readonly CursosOnlineContext _context;
+            public Manejador(UserManager<Usuario> userManager, SignInManager<Usuario> signInManager, IJwtGenerador jwtGenerador, CursosOnlineContext context)
             {
                 _userManager = userManager;
                 _signInManager = signInManager;
                 _jwtGenerador = jwtGenerador;
+                _context = context;
             }
             public async Task<UsuarioData> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
@@ -53,16 +58,41 @@ namespace Aplicacion.Seguridad
                 var resultadoRoles = await _userManager.GetRolesAsync(usuario);
                 var listaRoles = new List<string>(resultadoRoles);
 
+                var imagenPerfil = await _context.Documento.Where(x => x.ObjetoReferencia == new Guid(usuario.Id)).FirstOrDefaultAsync();
+
                 if (result.Succeeded)
                 {
-                    return new UsuarioData
+
+                    if (imagenPerfil != null)
                     {
-                        NombreCompleto = usuario.NombreCompleto,
-                        Token = _jwtGenerador.CrearToken(usuario, listaRoles),
-                        Username = usuario.UserName,
-                        Email = usuario.Email,
-                        Imagen = null
-                    };
+                        var imagenCliente = new ImagenGeneral
+                        {
+                            Data = Convert.ToBase64String(imagenPerfil.Contenido),
+                            Extension = imagenPerfil.Extension,
+                            Nombre = imagenPerfil.Nombre
+                        };
+
+                        return new UsuarioData
+                        {
+                            NombreCompleto = usuario.NombreCompleto,
+                            Token = _jwtGenerador.CrearToken(usuario, listaRoles),
+                            Username = usuario.UserName,
+                            Email = usuario.Email,
+                            ImagenPerfil = imagenCliente
+                        };
+                    }
+                    else
+                    {
+                        return new UsuarioData
+                        {
+                            NombreCompleto = usuario.NombreCompleto,
+                            Token = _jwtGenerador.CrearToken(usuario, listaRoles),
+                            Username = usuario.UserName,
+                            Email = usuario.Email,
+                            Imagen = null
+                        };
+                    }
+
                 }
 
                 //Solo devuevo codigo unauthorized

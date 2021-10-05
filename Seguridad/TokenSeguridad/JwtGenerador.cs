@@ -16,7 +16,7 @@ namespace Seguridad.TokenSeguridad
             var claims = new List<Claim> {
                 new Claim(JwtRegisteredClaimNames.NameId, usuario.UserName)
             };
-            if(roles != null)
+            if (roles != null)
             {
                 foreach (var rol in roles)
                 {

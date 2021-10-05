@@ -10,7 +10,7 @@ using Persistencia;
 namespace Persistencia.Migrations
 {
     [DbContext(typeof(CursosOnlineContext))]
-    [Migration("20210811191653_IdentityCoreInicial")]
+    [Migration("20211004161324_IdentityCoreInicial")]
     partial class IdentityCoreInicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,6 +36,9 @@ namespace Persistencia.Migrations
                     b.Property<Guid>("CursoId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<DateTime?>("FechaCreacion")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("Puntaje")
                         .HasColumnType("int");
 
@@ -54,6 +57,9 @@ namespace Persistencia.Migrations
 
                     b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("FechaCreacion")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("FechaPublicacion")
                         .HasColumnType("datetime2");
@@ -84,6 +90,32 @@ namespace Persistencia.Migrations
                     b.ToTable("CursoInstructor");
                 });
 
+            modelBuilder.Entity("Dominio.Documento", b =>
+                {
+                    b.Property<Guid>("DocumentoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<byte[]>("Contenido")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("Extension")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("FechaCreacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("ObjetoReferencia")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("DocumentoId");
+
+                    b.ToTable("Documento");
+                });
+
             modelBuilder.Entity("Dominio.Instructor", b =>
                 {
                     b.Property<Guid>("InstructorId")
@@ -92,6 +124,9 @@ namespace Persistencia.Migrations
 
                     b.Property<string>("Apellidos")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("FechaCreacion")
+                        .HasColumnType("datetime2");
 
                     b.Property<byte[]>("FotoPerfil")
                         .HasColumnType("varbinary(max)");

@@ -55,11 +55,28 @@ namespace Persistencia.Migrations
                     Titulo = table.Column<string>(nullable: true),
                     Descripcion = table.Column<string>(nullable: true),
                     FechaPublicacion = table.Column<DateTime>(nullable: true),
-                    FotoPortada = table.Column<byte[]>(nullable: true)
+                    FotoPortada = table.Column<byte[]>(nullable: true),
+                    FechaCreacion = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Curso", x => x.CursoId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Documento",
+                columns: table => new
+                {
+                    DocumentoId = table.Column<Guid>(nullable: false),
+                    ObjetoReferencia = table.Column<Guid>(nullable: false),
+                    Nombre = table.Column<string>(nullable: true),
+                    Extension = table.Column<string>(nullable: true),
+                    Contenido = table.Column<byte[]>(nullable: true),
+                    FechaCreacion = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Documento", x => x.DocumentoId);
                 });
 
             migrationBuilder.CreateTable(
@@ -70,7 +87,8 @@ namespace Persistencia.Migrations
                     Nombre = table.Column<string>(nullable: true),
                     Apellidos = table.Column<string>(nullable: true),
                     Grado = table.Column<string>(nullable: true),
-                    FotoPerfil = table.Column<byte[]>(nullable: true)
+                    FotoPerfil = table.Column<byte[]>(nullable: true),
+                    FechaCreacion = table.Column<DateTime>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -191,6 +209,7 @@ namespace Persistencia.Migrations
                     Alumno = table.Column<string>(nullable: true),
                     Puntaje = table.Column<int>(nullable: false),
                     ComentarioTexto = table.Column<string>(nullable: true),
+                    FechaCreacion = table.Column<DateTime>(nullable: true),
                     CursoId = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
@@ -326,6 +345,9 @@ namespace Persistencia.Migrations
 
             migrationBuilder.DropTable(
                 name: "CursoInstructor");
+
+            migrationBuilder.DropTable(
+                name: "Documento");
 
             migrationBuilder.DropTable(
                 name: "Precio");

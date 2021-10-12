@@ -10,8 +10,9 @@ import style from "../Tool/Style";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import { loginUser } from "../../actions/UserAction";
 import { useStateValue } from "../../context/store";
+import { withRouter } from "react-router-dom";
 
-const Login = () => {
+const Login = (props) => {
   const [{ userSession }, dispatch] = useStateValue();
   const [user, setUser] = useState({
     Email: "",
@@ -30,7 +31,19 @@ const Login = () => {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     loginUser(user, dispatch).then((response) => {
-      window.localStorage.setItem("token_security", response.data.token);
+      console.log(response);
+      if (response.status === 200) {
+        window.localStorage.setItem("token_security", response.data.token);
+        props.history.push("/");
+      } else {
+        dispatch({
+          type: "OPEN_SNACKBAR",
+          openMessage: {
+            open: true,
+            message: "User credentials are incorrect",
+          },
+        });
+      }
     });
   };
 
@@ -80,4 +93,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default withRouter(Login);

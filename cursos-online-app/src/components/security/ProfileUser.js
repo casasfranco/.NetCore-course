@@ -33,6 +33,7 @@ const ProfileUser = () => {
     setUser((prevUser) => ({
       ...prevUser,
       photoUrl: userSession.user.imagenPerfil,
+      imagenPerfil: null,
     }));
   }, []);
 
@@ -89,7 +90,7 @@ const ProfileUser = () => {
   return (
     <Container component="main" maxWidth="md" justify="center">
       <div style={style.paper}>
-        <Avatar style={style.avatar} src={user.photoUrl || reactLogo} />
+        <Avatar style={style.avatar} src={user?.photoUrl || reactLogo} />
         <Typography component="h1" variant="h5">
           User Profile
         </Typography>

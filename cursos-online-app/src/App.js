@@ -10,6 +10,7 @@ import { theme } from "./theme";
 import { useStateValue } from "./context/store";
 import { useEffect, useState } from "react";
 import { getCurrentUser } from "./actions/UserAction";
+import SecureRoute from "./components/Navigate/SecureRoute";
 
 const App = () => {
   const [{ userSession, openSnackbar }, dispatch] = useStateValue();
@@ -23,6 +24,7 @@ const App = () => {
           setInitApp(true);
         })
         .catch((error) => {
+          console.log(error);
           setInitApp(true);
         });
     }
@@ -55,10 +57,10 @@ const App = () => {
           <AppNavbar />
           <Grid container>
             <Switch>
-              <Route exact path="/auth/login" component={Login}></Route>
-              <Route exact path="/auth/register" component={Register}></Route>
-              <Route exact path="/auth/profile" component={ProfileUser}></Route>
-              <Route path="/" component={Login}></Route>
+              <Route exact path="/auth/login" component={Login} />
+              <Route exact path="/auth/register" component={Register} />
+              <SecureRoute exact path="/auth/profile" component={ProfileUser} />
+              <SecureRoute exact path="/" component={ProfileUser} />
             </Switch>
           </Grid>
         </ThemeProvider>

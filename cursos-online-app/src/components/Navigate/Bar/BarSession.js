@@ -69,6 +69,11 @@ const BarSession = (props) => {
 
   const logoutApp = () => {
     window.localStorage.removeItem("token_security");
+    dispatch({
+      type: 'LOGOUT',
+      newUser: null,
+      auth: false
+    })
     props.history.push("/auth/login");
   };
 
@@ -99,7 +104,7 @@ const BarSession = (props) => {
         <Typography variant="h6">Cursos Online</Typography>
         <div className={classes.grow}></div>
         <div className={classes.sectionDesktop}>
-          <Button color="inherit">Exit</Button>
+          <Button color="inherit" onClick={logoutApp}>Exit</Button>
           <Button color="inherit">{userSession?.user?.nombreCompleto}</Button>
           <Avatar
             src={userSession?.user?.imagenPerfil || UserImageTemp}

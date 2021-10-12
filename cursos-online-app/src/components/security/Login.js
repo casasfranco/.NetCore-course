@@ -9,8 +9,10 @@ import {
 import style from "../Tool/Style";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import { loginUser } from "../../actions/UserAction";
+import { useStateValue } from "../../context/store";
 
 const Login = () => {
+  const [{ userSession }, dispatch] = useStateValue();
   const [user, setUser] = useState({
     Email: "",
     Password: "",
@@ -27,7 +29,7 @@ const Login = () => {
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    loginUser(user).then((response) => {
+    loginUser(user, dispatch).then((response) => {
       window.localStorage.setItem("token_security", response.data.token);
     });
   };

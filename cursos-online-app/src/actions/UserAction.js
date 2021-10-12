@@ -11,6 +11,17 @@ export const registerUser = (user) => {
 export const getCurrentUser = (dispatch) => {
   return new Promise((resolve, eject) => {
     HttpClient.get("/Usuario").then((response) => {
+      if (response.data && response.data.imagenPerfil) {
+        let profilePhoto = response.data.imagenPerfil;
+        const image =
+          "data:image/" +
+          profilePhoto.extension +
+          ";base64," +
+          profilePhoto.data;
+
+        response.data.imagenPerfil = image;
+      }
+
       dispatch({
         type: "LOGIN",
         user: response.data,
@@ -21,10 +32,27 @@ export const getCurrentUser = (dispatch) => {
   });
 };
 
-export const updateCurrentUser = (user) => {
+export const updateCurrentUser = (user, dispatch) => {
   return new Promise((resolve, eject) => {
     HttpClient.put("/Usuario", user)
       .then((response) => {
+        if (response.data && response.data.imagenPerfil) {
+          let profilePhoto = response.data.imagenPerfil;
+          const image =
+            "data:image/" +
+            profilePhoto.extension +
+            ";base64," +
+            profilePhoto.data;
+
+          response.data.imagenPerfil = image;
+        }
+
+        dispatch({
+          type: "LOGIN",
+          user: response.data,
+          auth: true,
+        });
+
         resolve(response);
       })
       .catch((error) => {

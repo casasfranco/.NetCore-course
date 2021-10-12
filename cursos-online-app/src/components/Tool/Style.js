@@ -10,17 +10,18 @@ const style = {
     marginTop: 20,
   },
   submit: {
-    marginTop: 15
+    marginTop: 15,
+    marginBottom: 20,
   },
   avatar: {
     margin: 5,
     backgroundColor: "#1976d2",
-    width: 60, 
-    height: 60
+    width: 110,
+    height: 110,
   },
   icon: {
     fontSize: 40,
-  }
+  },
 };
 
 export default style;

@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/styles";
 import { Grid, Snackbar } from "@material-ui/core";
-import Login from "./components/security/Login";
-import ProfileUser from "./components/security/ProfileUser";
-import Register from "./components/security/Register";
+import Login from "./components/Security/Login";
+import ProfileUser from "./components/Security/ProfileUser";
+import Register from "./components/Security/Register";
 import AppNavbar from "./components/Navigate/AppNavbar";
 import { theme } from "./theme";
 import { useStateValue } from "./context/store";
@@ -28,7 +28,7 @@ const App = () => {
     }
   }, [initApp]);
 
-  return (
+  return initApp === false ? null : (
     <React.Fragment>
       <Snackbar
         anchorOrigin={{ vertical: "bottom", horizontal: "center" }}

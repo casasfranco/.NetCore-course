@@ -10,12 +10,11 @@ import { Link } from "react-router-dom";
 import UserImageTemp from "../../../logo.svg";
 
 const RightMenu = ({ classes, logout, user }) => {
-  console.log(user);
   return (
     <div className={classes.list}>
       <List>
         <ListItem component={Link} button>
-          <Avatar src={user?.imagen || UserImageTemp} />
+          <Avatar src={user?.imagenPerfil || UserImageTemp} />
           <ListItemText
             classes={{ primary: classes.listItemText }}
             primary={user?.nombreCompleto}

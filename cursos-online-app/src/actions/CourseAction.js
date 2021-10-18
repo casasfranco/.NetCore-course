@@ -12,3 +12,11 @@ export const saveCourse = async (course, image) => {
     return await Promise.all([promiseCourse]);
   }
 };
+
+export const paginationCourse = async (pager) => {
+  return new Promise((resolve, eject) => {
+    HttpClient.post("/Cursos/report", pager).then((res) => {
+      resolve(res);
+    });
+  });
+};

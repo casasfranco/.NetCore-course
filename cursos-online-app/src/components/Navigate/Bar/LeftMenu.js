@@ -23,7 +23,7 @@ const LeftMenu = ({ classes }) => {
             primary="New Course"
           />
         </ListItem>
-        <ListItem component={Link} button to="/course/list">
+        <ListItem component={Link} button to="/course/pager">
           <i className="material-icons">menu_book</i>
           <ListItemText
             classes={{ primary: classes.listItemText }}
